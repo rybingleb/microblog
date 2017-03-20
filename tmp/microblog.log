@@ -1,0 +1,257 @@
+2017-03-09 15:11:44,543 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-09 15:11:58,474 ERROR: Exception on /edit [POST] [in C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\engine\base.py", line 1182, in _execute_context
+    context)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\engine\default.py", line 470, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: user.nickname
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\views.py", line 120, in edit
+    db.session.commit()
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\scoping.py", line 157, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\session.py", line 874, in commit
+    self.transaction.commit()
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\session.py", line 461, in commit
+    self._prepare_impl()
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\session.py", line 441, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\session.py", line 2139, in flush
+    self._flush(objects)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\session.py", line 2259, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\util\langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\util\compat.py", line 187, in reraise
+    raise value
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\session.py", line 2223, in _flush
+    flush_context.execute()
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 389, in execute
+    rec.execute(self)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 548, in execute
+    uow
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\persistence.py", line 177, in save_obj
+    mapper, table, update)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\persistence.py", line 737, in _emit_update_statements
+    execute(statement, multiparams)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\engine\base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\sql\elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\engine\base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\engine\base.py", line 1189, in _execute_context
+    context)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\engine\base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\util\compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\util\compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\engine\base.py", line 1182, in _execute_context
+    context)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\engine\default.py", line 470, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.nickname [SQL: 'UPDATE user SET nickname=?, about_me=? WHERE user.id = ?'] [parameters: ('33', 'test test test 789790878 привет', 8)]
+2017-03-09 15:36:53,258 ERROR: Exception on /edit [POST] [in C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\engine\base.py", line 1182, in _execute_context
+    context)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\engine\default.py", line 470, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: user.nickname
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\views.py", line 120, in edit
+    db.session.add(g.user)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\scoping.py", line 157, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\session.py", line 874, in commit
+    self.transaction.commit()
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\session.py", line 461, in commit
+    self._prepare_impl()
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\session.py", line 441, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\session.py", line 2139, in flush
+    self._flush(objects)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\session.py", line 2259, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\util\langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\util\compat.py", line 187, in reraise
+    raise value
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\session.py", line 2223, in _flush
+    flush_context.execute()
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 389, in execute
+    rec.execute(self)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 548, in execute
+    uow
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\persistence.py", line 177, in save_obj
+    mapper, table, update)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\orm\persistence.py", line 737, in _emit_update_statements
+    execute(statement, multiparams)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\engine\base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\sql\elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\engine\base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\engine\base.py", line 1189, in _execute_context
+    context)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\engine\base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\util\compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\util\compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\engine\base.py", line 1182, in _execute_context
+    context)
+  File "C:\Users\gribin.SPRAVNIK\AppData\Local\Programs\Python\Python36-32\lib\site-packages\sqlalchemy\engine\default.py", line 470, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.nickname [SQL: 'UPDATE user SET nickname=?, about_me=? WHERE user.id = ?'] [parameters: ('33', 'test test test 789790878 привет', 8)]
+2017-03-09 15:37:22,543 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-09 15:38:36,601 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-09 17:04:44,345 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-09 17:21:14,499 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-09 17:22:32,807 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-09 17:33:00,889 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-09 17:33:12,180 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-10 16:44:54,021 INFO: microblog startup [in C:\Users\User\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-10 16:44:55,829 INFO: microblog startup [in C:\Users\User\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-13 17:16:04,109 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-13 17:16:05,583 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-13 17:16:43,090 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-13 17:16:44,243 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-14 15:12:58,123 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-14 15:12:59,481 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-14 15:16:02,904 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-14 15:19:46,652 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-14 15:20:29,748 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-14 15:22:21,795 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-14 15:23:16,320 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-14 15:23:40,672 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-14 15:28:30,122 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-14 15:29:55,276 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-14 15:31:00,883 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-14 15:31:15,879 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-14 15:31:27,268 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-14 15:31:53,234 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:27]
+2017-03-16 09:07:37,434 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 09:07:39,212 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 09:09:09,830 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 09:09:11,346 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 09:10:30,396 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 09:10:57,205 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 09:11:17,155 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 09:11:57,246 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 09:11:58,767 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 09:18:00,026 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 09:53:20,090 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 09:53:21,556 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 09:53:46,056 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 09:59:48,087 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 09:59:49,499 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 10:21:58,273 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 10:21:59,926 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:29]
+2017-03-16 11:16:22,265 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:31]
+2017-03-16 11:16:23,645 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:31]
+2017-03-16 11:21:57,752 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:31]
+2017-03-16 11:21:59,185 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:31]
+2017-03-16 12:53:38,163 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:31]
+2017-03-16 12:53:39,605 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:31]
+2017-03-17 10:03:58,988 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:31]
+2017-03-17 10:04:00,568 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:31]
+2017-03-17 10:11:18,067 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:34]
+2017-03-17 10:11:19,478 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:34]
+2017-03-17 10:11:54,176 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:34]
+2017-03-17 10:11:55,549 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:34]
+2017-03-17 10:12:15,786 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:34]
+2017-03-17 10:12:35,241 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:34]
+2017-03-17 10:13:15,398 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:34]
+2017-03-17 10:13:16,581 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:34]
+2017-03-17 10:13:44,239 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:31]
+2017-03-17 10:14:52,989 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 10:14:54,505 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 10:16:01,820 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 10:16:07,165 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 10:19:39,487 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 10:19:41,181 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 10:19:58,015 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 10:20:09,006 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 10:58:19,241 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 11:14:35,680 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 11:14:49,125 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 11:27:14,475 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 11:28:03,879 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 11:28:32,589 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 12:41:45,768 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 12:41:47,212 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 12:47:52,374 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 12:47:53,850 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 12:52:15,722 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 12:52:17,171 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 12:53:50,837 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 12:53:52,118 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:02:45,084 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:02:46,393 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:07:22,749 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:09:16,935 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:09:18,258 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:10:06,380 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:10:07,829 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:16:09,317 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:16:10,866 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:16:51,914 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:16:53,498 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:17:35,045 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:17:36,391 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:17:51,599 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:17:52,953 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:23:48,222 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:35]
+2017-03-17 13:24:50,499 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
+2017-03-17 13:30:05,573 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
+2017-03-17 13:30:06,946 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
+2017-03-20 11:56:56,847 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
+2017-03-20 11:56:58,652 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
+2017-03-20 12:08:11,878 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
+2017-03-20 12:08:13,469 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
+2017-03-20 12:08:53,440 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
+2017-03-20 12:08:55,824 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
+2017-03-20 12:44:51,930 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
+2017-03-20 12:44:53,561 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
+2017-03-20 12:45:21,791 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
+2017-03-20 12:45:23,524 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]

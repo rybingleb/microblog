@@ -1,0 +1,17 @@
+<p>Dear {{user.nickname}},</p>
+<p><a href="{{url_for('user', nickname = follower.nickname, _external = True)}}">{{follower.nickname}}</a> is now a follower.</p>
+<table>
+    <tr valign="top">
+        <td><img src=""></td>
+        <td>
+            <!-- Обратите внимание на _external = True в поле url_for нашего шаблона. По умолчанию, функция url_for генерирует URL'ы относительно текущей страницы.
+            Для примера, code{url_for(«index»)} будет /index, в то время,
+            когда мы ожидаем localhost:5000/index. В электронной почте нет доменного контекста,
+            поэтому мы должны указывать полные адреса URL, которые включают домен, в этом нам и поможет _external.-->
+            <a href="{{url_for('user', nickname = follower.nickname, _external = True)}}">{{follower.nickname}}</a><br />
+            {{follower.about_me}}
+        </td>
+    </tr>
+</table>
+<p>Regards,</p>
+<p>The <code>microblog</code> admin</p>
