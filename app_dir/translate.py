@@ -1,6 +1,9 @@
-import urllib, http.client
+import http.client
 import json
+import urllib
+
 from flask_babel import gettext
+
 from config import TRANSLATE_YANDEX_API_KEY
 
 

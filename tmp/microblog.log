@@ -255,3 +255,6 @@ sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed
 2017-03-20 12:44:53,561 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
 2017-03-20 12:45:21,791 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
 2017-03-20 12:45:23,524 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
+2017-03-20 14:08:15,684 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
+2017-03-20 14:08:17,230 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
+2017-03-20 14:09:28,829 INFO: microblog startup [in C:\YandexDisk\Глеб работа\python\Flask\microblog\app_dir\__init__.py:36]
