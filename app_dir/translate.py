@@ -32,3 +32,5 @@ def translate(text, sourceLang, destLang):
         return ''.join(jresp['text'])
     except:
         return gettext('Error: Unexpected error.')
+
+print(translate('text', '', 'ru'))

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-03-17 14:58+0300\n"
+"POT-Creation-Date: 2017-03-20 17:32+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,48 +27,157 @@ msgid ""
 "and underscores only."
 msgstr ""
 
-#: app_dir/translate.py:10
+#: app_dir/translate.py:13
 msgid "Error: translation service not configured."
 msgstr ""
 
-#: app_dir/translate.py:31
+#: app_dir/translate.py:34
 msgid "Error: Unexpected error."
 msgstr ""
 
-#: app_dir/views.py:80
+#: app_dir/views.py:82
 msgid "Invalid login. Please try again."
 msgstr ""
 
-#: app_dir/templates/base.html:34
+#: app_dir/templates/404.html:5
+msgid "File Not Found"
+msgstr ""
+
+#: app_dir/templates/404.html:6 app_dir/templates/500.html:7
+msgid "Back"
+msgstr ""
+
+#: app_dir/templates/500.html:5
+msgid "An unexpected error has occurred"
+msgstr ""
+
+#: app_dir/templates/500.html:6
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr ""
+
+#: app_dir/templates/base.html:33
 msgid "Home"
 msgstr ""
 
-#: app_dir/templates/base.html:36
+#: app_dir/templates/base.html:35
 msgid "Your Profile"
 msgstr ""
 
-#: app_dir/templates/base.html:38
+#: app_dir/templates/base.html:36
 msgid "Logout"
 msgstr ""
 
+#: app_dir/templates/base.html:41
+msgid "Search"
+msgstr ""
+
+#: app_dir/templates/edit.html:5
+msgid "Edit Your Profile"
+msgstr ""
+
+#: app_dir/templates/edit.html:11
+msgid "Your nickname:"
+msgstr ""
+
+#: app_dir/templates/edit.html:20
+msgid "About yourself:"
+msgstr ""
+
+#: app_dir/templates/edit.html:30
+msgid "Save Changes"
+msgstr ""
+
+#: app_dir/templates/follower_email.html:2
+#, python-format
+msgid "%(nickname)s is now a follower."
+msgstr ""
+
+#: app_dir/templates/follower_email.html:12
+msgid "Regards,"
+msgstr ""
+
+#: app_dir/templates/follower_email.html:13
+msgid "The <code>microblog</code> admin"
+msgstr ""
+
 #: app_dir/templates/index.html:5
-msgid "Hi,"
+#, python-format
+msgid "Hi, %(nickname)s!"
 msgstr ""
 
 #: app_dir/templates/index.html:11
 msgid "Say something:"
 msgstr ""
 
-#: app_dir/templates/index.html:31
+#: app_dir/templates/index.html:21
+msgid "Post!"
+msgstr ""
+
+#: app_dir/templates/index.html:31 app_dir/templates/index.html:33
+#: app_dir/templates/user.html:30 app_dir/templates/user.html:32
 msgid "Newer posts"
 msgstr ""
 
-#: app_dir/templates/index.html:36
+#: app_dir/templates/index.html:36 app_dir/templates/index.html:38
+#: app_dir/templates/user.html:35 app_dir/templates/user.html:37
 msgid "Older posts"
 msgstr ""
 
-#: app_dir/templates/post.html:7
+#: app_dir/templates/login.html:20
+msgid "Please Sign In"
+msgstr ""
+
+#: app_dir/templates/login.html:23
+msgid "Click on your OpenID provider below:"
+msgstr ""
+
+#: app_dir/templates/login.html:30
+msgid "Or enter your OpenID here:"
+msgstr ""
+
+#: app_dir/templates/login.html:41
+msgid "Remember Me"
+msgstr ""
+
+#: app_dir/templates/login.html:47
+msgid "Sign In"
+msgstr ""
+
+#: app_dir/templates/post.html:6
 #, python-format
 msgid "%(nickname)s said %(when)s:"
+msgstr ""
+
+#: app_dir/templates/post.html:10
+msgid "Translate"
+msgstr ""
+
+#: app_dir/templates/search_results.html:5
+#, python-format
+msgid "Search results for \"%(query)s\":"
+msgstr ""
+
+#: app_dir/templates/user.html:13
+msgid "Last seen:"
+msgstr ""
+
+#: app_dir/templates/user.html:15
+msgid "Followers:"
+msgstr ""
+
+#: app_dir/templates/user.html:15
+msgid "Following:"
+msgstr ""
+
+#: app_dir/templates/user.html:17
+msgid "Edit your profile"
+msgstr ""
+
+#: app_dir/templates/user.html:19
+msgid "Follow"
+msgstr ""
+
+#: app_dir/templates/user.html:21
+msgid "Unfollow"
 msgstr ""
 

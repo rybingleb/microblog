@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, BooleanField, TextAreaField
+from wtforms import StringField, BooleanField, TextAreaField, SelectField, SelectMultipleField, RadioField
 from wtforms.validators import DataRequired, Length
 
 from .models import User
@@ -42,3 +42,20 @@ class PostForm(FlaskForm):
 
 class SearchForm(FlaskForm):
     search = StringField('search', validators=[DataRequired()])
+
+
+class TestForm(FlaskForm):
+    string_field = StringField('openid', validators=[DataRequired()], default='язх234')
+    boolean_field = BooleanField('BooleanField', default=True)
+    text_area_field = TextAreaField('TextAreaField', validators=[Length(min=0, max=140)], default='хзфыв34')
+    select_field = SelectField('SelectField')
+    select_multiple_field = SelectMultipleField('SelectMultipleField')
+    radio_field = RadioField('RadioField')
+
+    def __init__(self, *args, **kwargs):
+        FlaskForm.__init__(self, *args, **kwargs)
+
+        choices = [('cpp', 'C++'), ('py', 'Python'), ('text', 'Plain Text')]
+        self.select_field.choices = choices
+        self.select_multiple_field.choices = choices
+        self.radio_field.choices = choices

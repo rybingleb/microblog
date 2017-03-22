@@ -10,6 +10,7 @@ from .emails import follower_notification
 from flask_babel import gettext
 from flask import jsonify
 from .translate import translate
+from .forms import TestForm
 
 
 @lm.user_loader
@@ -223,3 +224,20 @@ def translate():
             request.form['text'],
             request.form['sourceLang'],
             request.form['destLang'])})
+
+
+@app.route('/test_form', methods=['GET', 'POST'])
+def test_form():
+    # return 'test';
+    form = TestForm()
+
+    if form.validate_on_submit():
+        print('string_field:', form.string_field.data)
+        print('boolean_field:', form.boolean_field.data)
+        print('text_area_field:', form.text_area_field.data)
+        print('select_field:', form.select_field.data)
+        print('select_multiple_field:', form.select_multiple_field.data)
+        print('radio_field:', form.radio_field.data)
+        return redirect(url_for('test_form'))
+
+    return render_template('test_form.html', form=form)

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form class="form-horizontal" action="" method="post" name="edit">
+    {{form.hidden_tag()}}
+    string_field {{ form.string_field(maxlength = 64, class = "span4") }}
+    {% for error in form.errors.string_field %}
+        <span class="help-inline">[{{error}}]</span><br>
+    {% endfor %}
+    <br>
+    boolean_field {{ form.boolean_field() }}
+    {% for error in form.errors.boolean_field %}
+        <span class="help-inline">[{{error}}]</span><br>
+    {% endfor %}
+    <br>
+    text_area_field {{ form.text_area_field() }}
+    {% for error in form.errors.text_area_field %}
+        <span class="help-inline">[{{error}}]</span><br>
+    {% endfor %}
+    <br>
+    select_field {{ form.select_field() }}
+    {% for error in form.errors.select_field %}
+        <span class="help-inline">[{{error}}]</span><br>
+    {% endfor %}
+    <br>
+    select_multiple_field {{ form.select_multiple_field() }}
+    {% for error in form.errors.select_multiple_field %}
+        <span class="help-inline">[{{error}}]</span><br>
+    {% endfor %}
+    <br>
+    radio_field {{ form.radio_field() }}
+    {% for error in form.errors.radio_field %}
+        <span class="help-inline">[{{error}}]</span><br>
+    {% endfor %}
+    <br>
+    <input type="submit" value="кнопка">
+</form>
+</body>
+</html>

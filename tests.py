@@ -5,6 +5,7 @@ from config import basedir
 from datetime import datetime, timedelta
 from app_dir import app, db
 from app_dir.models import User, Post
+from app_dir.translate import translate
 
 
 class TestCase(unittest.TestCase):
@@ -110,6 +111,10 @@ class TestCase(unittest.TestCase):
         assert f2 == [p3, p2]
         assert f3 == [p4, p3]
         assert f4 == [p4]
+
+    def test_translation(self):
+        assert translate(u'English', 'en', 'ru') == u'Английский'
+        assert translate(u'Русский', 'ru', 'en') == u'Russian'
 
 
 if __name__ == '__main__':
