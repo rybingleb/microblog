@@ -1,7 +1,8 @@
-app.db
-.idea
 __pycache__/
 app_dir/__pycache__/
 db_repository/__pycache__/
 db_repository/versions/__pycache__/
 tmp/temp/
+/app.db
+/.idea/
+/tmp/

@@ -226,18 +226,37 @@ def translate():
             request.form['destLang'])})
 
 
+@app.route('/delete/<int:id>')
+@login_required
+def delete(id):
+    post = Post.query.get(id)
+    if post is None:
+        flash(gettext('Post not found.'))
+        return redirect(url_for('index'))
+    if post.author.id != g.user.id:
+        flash(gettext('You cannot delete this post.'))
+        return redirect(url_for('index'))
+    db.session.delete(post)
+    db.session.commit()
+    flash(gettext('Your post has been deleted.'))
+    return redirect(url_for('user', nickname=g.user.nickname))
+
+
 @app.route('/test_form', methods=['GET', 'POST'])
 def test_form():
     # return 'test';
     form = TestForm()
 
     if form.validate_on_submit():
-        print('string_field:', form.string_field.data)
-        print('boolean_field:', form.boolean_field.data)
-        print('text_area_field:', form.text_area_field.data)
-        print('select_field:', form.select_field.data)
-        print('select_multiple_field:', form.select_multiple_field.data)
-        print('radio_field:', form.radio_field.data)
+        # print('string_field:', form.string_field.data)
+        # print('boolean_field:', form.boolean_field.data)
+        # print('text_area_field:', form.text_area_field.data)
+        # print('select_field:', form.select_field.data)
+        # print('select_multiple_field:', form.select_multiple_field.data)
+        # print('radio_field:', form.radio_field.data)
+
+        print(form.data)
+
         return redirect(url_for('test_form'))
 
     return render_template('test_form.html', form=form)

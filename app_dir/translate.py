@@ -33,4 +33,5 @@ def translate(text, sourceLang, destLang):
     except:
         return gettext('Error: Unexpected error.')
 
+
 print(translate('text', '', 'ru'))

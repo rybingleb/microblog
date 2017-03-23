@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-03-20 17:32+0300\n"
-"PO-Revision-Date: 2017-03-20 17:34+0300\n"
+"POT-Creation-Date: 2017-03-23 09:27+0300\n"
+"PO-Revision-Date: 2017-03-23 09:31+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
@@ -40,9 +40,21 @@ msgstr "Ошибка: услуги перевода не настроен."
 msgid "Error: Unexpected error."
 msgstr "Ошибка: непредвиденная ошибка."
 
-#: app_dir/views.py:82
+#: app_dir/views.py:83
 msgid "Invalid login. Please try again."
 msgstr "Неверный логин. Пожалуйста, попробуйте еще раз."
+
+#: app_dir/views.py:234
+msgid "Post not found."
+msgstr "Пост не найден."
+
+#: app_dir/views.py:237
+msgid "You cannot delete this post."
+msgstr "Нельзя удалять этот пост."
+
+#: app_dir/views.py:241
+msgid "Your post has been deleted."
+msgstr "Ваше сообщение было удалено."
 
 #: app_dir/templates/404.html:5
 msgid "File Not Found"
@@ -60,19 +72,23 @@ msgstr "Произошла непредвиденная ошибка"
 msgid "The administrator has been notified. Sorry for the inconvenience!"
 msgstr "Администратор был уведомлен. Извините за неудобства!"
 
-#: app_dir/templates/base.html:33
+#: app_dir/templates/base.html:26
+msgid "Error: Could not contact server."
+msgstr "Ошибка: не удалось подключиться к серверу."
+
+#: app_dir/templates/base.html:51
 msgid "Home"
 msgstr "Главная"
 
-#: app_dir/templates/base.html:35
+#: app_dir/templates/base.html:53
 msgid "Your Profile"
 msgstr "Ваш профиль"
 
-#: app_dir/templates/base.html:36
+#: app_dir/templates/base.html:54
 msgid "Logout"
 msgstr "Выйти"
 
-#: app_dir/templates/base.html:41
+#: app_dir/templates/base.html:59
 msgid "Search"
 msgstr "Поиск"
 
@@ -82,24 +98,24 @@ msgstr "Ваш профиль"
 
 #: app_dir/templates/edit.html:11
 msgid "Your nickname:"
-msgstr ""
+msgstr "Ваш профиль:"
 
 #: app_dir/templates/edit.html:20
 msgid "About yourself:"
-msgstr ""
+msgstr "О себе:"
 
 #: app_dir/templates/edit.html:30
 msgid "Save Changes"
-msgstr ""
+msgstr "Сохранить изменения"
 
 #: app_dir/templates/follower_email.html:2
 #, python-format
 msgid "%(nickname)s is now a follower."
-msgstr ""
+msgstr "%(nickname)s теперь подписчик."
 
 #: app_dir/templates/follower_email.html:12
 msgid "Regards,"
-msgstr ""
+msgstr "С уважением,"
 
 #: app_dir/templates/follower_email.html:13
 msgid "The <code>microblog</code> admin"
@@ -146,14 +162,14 @@ msgstr ""
 
 #: app_dir/templates/login.html:47
 msgid "Sign In"
-msgstr ""
+msgstr "Войти"
 
-#: app_dir/templates/post.html:6
+#: app_dir/templates/post.html:7
 #, python-format
 msgid "%(nickname)s said %(when)s:"
 msgstr "%(nickname)s написал %(when)s:"
 
-#: app_dir/templates/post.html:10
+#: app_dir/templates/post.html:13
 msgid "Translate"
 msgstr "Перевести"
 
@@ -172,11 +188,11 @@ msgstr "Подписчики:"
 
 #: app_dir/templates/user.html:15
 msgid "Following:"
-msgstr ""
+msgstr "Подписки:"
 
 #: app_dir/templates/user.html:17
 msgid "Edit your profile"
-msgstr ""
+msgstr "Редактировать профиль"
 
 #: app_dir/templates/user.html:19
 msgid "Follow"

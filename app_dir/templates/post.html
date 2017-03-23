@@ -8,6 +8,9 @@
                 post.author.nickname), post.author.nickname), when = momentjs(post.timestamp).fromNow()) }}</p>
             {% endautoescape %}
             <p><strong><span id="post{{post.id}}">{{post.body}}</span></strong></p>
+            {% if post.author.id == g.user.id %}
+            <div><a href="{{ url_for('delete', id = post.id) }}">{{ _('Delete') }}</a></div>
+            {% endif %}
             {% if post.language != g.locale %}
             <div><span id="translation{{post.id}}"><a
                     href="javascript:translate('{{post.language}}', '{{g.locale}}', '#post{{post.id}}', '#translation{{post.id}}', '#loading{{post.id}}');">{{ _('Translate') }}</a></span>
